@@ -15,7 +15,7 @@ export default function InvoiceList() {
 
   const countLabel = filtered.length === 0
     ? 'No invoices'
-    : `${filtered.length} invoice${filtered.length !== 1 ? 's' : ''}`
+    : `There are ${filtered.length} total invoice${filtered.length !== 1 ? 's' : ''}`
 
   return (
     <motion.div

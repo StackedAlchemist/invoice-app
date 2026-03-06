@@ -57,7 +57,7 @@ export default function InvoiceCard({ invoice, onClick }: Props) {
           src={arrowRight}
           alt=""
           aria-hidden="true"
-          className="hidden sm:block w-2 opacity-0 group-hover:opacity-100 transition-opacity"
+          className="hidden sm:block w-2"
         />
       </div>
     </motion.article>

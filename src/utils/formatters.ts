@@ -7,7 +7,9 @@ export function formatCurrency(amount: number): string {
 }
 
 export function formatDate(dateStr: string): string {
-  const date = new Date(dateStr)
+  // Parse as local date to avoid UTC offset shifting the day
+  const [year, month, day] = dateStr.split('-').map(Number)
+  const date = new Date(year, month - 1, day)
   return new Intl.DateTimeFormat('en-GB', {
     day: '2-digit',
     month: 'short',
